@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/242284599f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Weather Forecast</h1>
+        <div class="row">
+          <div class="col">
+            <form id="search-form">
+              <input
+                class="searchBar"
+                type="search"
+                id="search-input"
+                placeholder="Search by city or zip code"
+              />
+            </form>
+          </div>
+          <div class="col">
+            <div class="alignRight">
+              <button class="currentLoc">Current location</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="currentWeather">
+        <div class="top">
+          <div class="row">
+            <div class="col-9">
+              <h2>Current Weather</h2>
+              <h4 class="location" id="city-name"></h4>
+              <h4 class="time" id="current-time"></h4>
+            </div>
+
+            <div class="col-3">
+              <h5 class="date"></h5>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="row">
+            <div class="col-3 verticalDivider">
+              <div class="currentTemp">
+                <img src="media/cloudy.svg" />
+                <h1 id="current-temp"></h1>
+                <span class="unit">
+                  <a href="#" id="celcius">°C</a> |
+                  <a href="#" id="fahrenheit">°F</a>
+                </span>
+              </div>
+            </div>
+            <div class="col verticalDivider">
+              <div class="row">
+                <div class="col-6">
+                  <ul class="label">
+                    <li>
+                      <label>HUMIDITY</label>
+                    </li>
+                    <li>
+                      <label>WIND</label>
+                    </li>
+                    <li>
+                      <label>RAIN</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="value">
+                    <li>
+                      <h5><span id="humidity"></span>%</h5>
+                    </li>
+                    <li>
+                      <h5><span id="wind"></span> mph</h5>
+                    </li>
+                    <li>
+                      <h5><span id="rain">13</span>%</h5>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col verticalDividerHidden">
+              <div class="row">
+                <div class="col-6">
+                  <ul class="label">
+                    <li>
+                      <label>SUNRISE</label>
+                    </li>
+                    <li>
+                      <label>SUNSET</label>
+                    </li>
+                    <li>
+                      <label>UV INDEX</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="value">
+                    <li>
+                      <h5>05:30 am</h5>
+                    </li>
+                    <li>
+                      <h5>08:12 pm</h5>
+                    </li>
+                    <li>
+                      <h5>3 of 10</h5>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fiveDayWeather">
+        <h2>5 Day Weather</h2>
+        <div class="foreCast">
+          <div class="row">
+            <div class="col">
+              <h6 class="futureDate">7/31 Sun</h6>
+              <img src="media/rainy-1.svg" />
+              <h5><strong>78</strong> / 72° F</h5>
+              <h6>PM showers</h6>
+            </div>
+            <div class="col">
+              <h6 class="futureDate">8/1 Mon</h6>
+              <img src="media/day.svg" />
+              <h5><strong>89</strong> / 79° F</h5>
+              <h6>Sunny</h6>
+            </div>
+            <div class="col">
+              <h6 class="futureDate">8/2 Tue</h6>
+              <img src="media/thunder.svg" />
+              <h5><strong>80</strong> / 74° F</h5>
+              <h6>Thunderstorms</h6>
+            </div>
+            <div class="col">
+              <h6 class="futureDate">8/3 Wed</h6>
+              <img src="media/cloudy.svg" />
+              <h5><strong>84</strong> / 73° F</h5>
+              <h6>Cloudy</h6>
+            </div>
+            <div class="col">
+              <h6 class="futureDate">8/4 Thu</h6>
+              <img src="media/day.svg" />
+              <h5><strong>90</strong> / 84° F</h5>
+              <h6>Sunny</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="createdBy">Created by Angel Leung</p>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+body {
+  background-color: #e6e6d4;
+}
+.container {
+  max-width: 80%;
+  font-family: "Merriweather", serif;
+  font-family: "Source Sans Pro", sans-serif;
+}
+header {
+  padding: 60px 0px 20px 0px;
+}
+
+header h1 {
+  color: #005874;
+  font-weight: 900;
+  font-size: 48px;
+}
+
+header input {
+  border-radius: 24px;
+  line-height: 36px;
+  padding: 5px 20px;
+  margin: 20px 0 0;
+  width: 100%;
+  border-color: #1989ac;
+  border-style: solid;
+  background-color: #faf5e4;
+}
+
+button.currentLoc {
+  background-color: #1989ac;
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 8px;
+  margin: 25px auto;
+  font-family: "Source Sans Pro", san-serif;
+  border-style: none;
+  transition: all 200ms ease-in-out;
+}
+.alignRight {
+  text-align: right;
+}
+button:hover {
+  background-color: #005874;
+  cursor: pointer;
+}
+
+.currentWeather {
+  border-style: solid;
+  border-radius: 18px;
+  border-color: #faf5e4;
+  background-color: #faf5e4;
+  padding: 20px 30px;
+  margin: 10px 0;
+}
+
+.top {
+  padding: 10px 0px 20px;
+}
+
+h2 {
+  color: #005874;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+}
+h4 {
+  color: #283e56;
+  display: inline;
+  padding: 0px 20px 0px 0px;
+  font-size: 24px;
+}
+
+h5.date {
+  text-align: right;
+  color: #283e56;
+  font-size: 20px;
+}
+
+span.unit {
+  color: #283e56;
+  font-size: 16px;
+}
+
+a {
+  color: #283e56;
+}
+a:hover {
+  color: #1989ac;
+}
+
+.currentTemp {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px 0px 10px;
+}
+.verticalDivider {
+  border-right: thin solid #e6e6d4;
+  margin: 20px 0;
+}
+
+.verticalDividerHidden {
+  border-right: thin solid #faf5e4;
+  margin: 20px 0;
+}
+
+.currentTemp img {
+  width: 90px;
+}
+.currentTemp h1 {
+  font-weight: 600;
+  font-size: 40px;
+  color: #283e56;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+.label {
+  padding: 20px 0px 10px 30px;
+}
+
+.value {
+  padding: 20px 20px 10px 10px;
+}
+
+li {
+  padding: 10px 0px;
+}
+li label {
+  line-height: 24px;
+}
+li h5 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.fiveDayWeather {
+  padding: 20px 30px;
+  margin: 40px 0;
+}
+
+.foreCast {
+  padding: 20px 0px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+.foreCast img {
+  width: 70px;
+}
+
+.futureDate {
+  font-weight: 600;
+}
+
+.foreCast h5 {
+  font-size: 24px;
+  color: #283e56;
+  padding: 0px 0px 5px 0px;
+}
+
+.foreCast h6 {
+  font-size: 16px;
+  color: #283e56;
+}
+
+.createdBy {
+  font-size: 12px;
+  color: #283e56;
+  text-align: center;
+  padding: 80px 0px 10px 0px;
+  bottom: 0;
+}
