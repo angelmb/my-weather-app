@@ -65,14 +65,14 @@ h2 {
   font-size: 36px;
   line-height: 48px;
 }
-h4 {
+#city-name {
   color: #283e56;
   display: inline;
   padding: 0px 20px 0px 0px;
   font-size: 24px;
 }
 
-h5.date {
+.col-3 h5 {
   text-align: right;
   color: #283e56;
   font-size: 20px;

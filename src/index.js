@@ -1,4 +1,3 @@
-//feature 1 - display the current date and time using JavaScript: Tuesday 16:00
 let today = new Date();
 let days = [
   "Sunday",
@@ -43,9 +42,6 @@ currentTime.innerHTML = `${dayOfWeek} ${currentHour}:${currentMinute}`;
 let currentDate = document.querySelector("h5.date");
 currentDate.innerHTML = `${month} ${date}, ${year}`;
 
-//plus-week 5 homework
-//show current temperature of the searched city:
-
 function showWeather(response) {
   let temp = document.querySelector("#current-temp");
   temp.innerHTML = Math.round(response.data.main.temp);
@@ -74,8 +70,6 @@ function searchCityWeather(event) {
 let searchBar = document.querySelector("#search-form");
 searchBar.addEventListener("submit", searchCityWeather);
 
-//plus-week 5 homework bonus
-//show current temperature of current location:
 function showTempCurrentLoc(response) {
   let temp = document.querySelector("#current-temp");
   temp.innerHTML = Math.round(response.data.main.temp);
