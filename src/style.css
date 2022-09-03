@@ -56,7 +56,7 @@ button:hover {
 }
 
 .top {
-  padding: 10px 0px 20px;
+  padding: 10px 0px 5px;
 }
 
 h2 {
@@ -65,6 +65,7 @@ h2 {
   font-size: 36px;
   line-height: 48px;
 }
+
 #city-name {
   color: #283e56;
   display: inline;
@@ -72,15 +73,34 @@ h2 {
   font-size: 24px;
 }
 
-.col-3 h5 {
+#timestamp {
   text-align: right;
   color: #283e56;
   font-size: 20px;
 }
 
+.currentTemp {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px 0px 5px;
+}
+
+.currentTemp img {
+  width: 80px;
+}
+.currentTemp h1 {
+  font-weight: 600;
+  font-size: 40px;
+  color: #283e56;
+  line-height: 30px;
+}
+
 span.unit {
   color: #283e56;
   font-size: 16px;
+  font-weight: 400;
+  position: relative;
 }
 
 a {
@@ -91,29 +111,14 @@ a:hover {
   color: #283e56;
 }
 
-.currentTemp {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  padding: 15px 0px 10px;
-}
 .verticalDivider {
   border-right: thin solid #e6e6d4;
-  margin: 20px 0;
+  margin: 0px 0px 5px 0px;
 }
 
 .verticalDividerHidden {
   border-right: thin solid #faf5e4;
-  margin: 20px 0;
-}
-
-.currentTemp img {
-  width: 90px;
-}
-.currentTemp h1 {
-  font-weight: 600;
-  font-size: 40px;
-  color: #283e56;
+  margin: 0px 0px 5px 0px;
 }
 
 ul {

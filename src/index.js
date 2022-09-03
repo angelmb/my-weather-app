@@ -43,8 +43,11 @@ let currentDate = document.querySelector("h5.date");
 currentDate.innerHTML = `${month} ${date}, ${year}`;
 
 function showWeather(response) {
+  console.log(response);
   let temp = document.querySelector("#current-temp");
   temp.innerHTML = Math.round(response.data.main.temp);
+  let condition = document.querySelector("#current-condition");
+  condition.innerHTML = response.data.weather[0].main;
   let cityName = document.querySelector("#city-name");
   cityName.innerHTML = response.data.name;
   let humidity = document.querySelector("#humidity");
@@ -73,6 +76,8 @@ searchBar.addEventListener("submit", searchCityWeather);
 function showTempCurrentLoc(response) {
   let temp = document.querySelector("#current-temp");
   temp.innerHTML = Math.round(response.data.main.temp);
+  let condition = document.querySelector("#current-condition");
+  condition.innerHTML = response.data.weather[0].main;
   let cityName = document.querySelector("#city-name");
   cityName.innerHTML = response.data.name;
   let humidity = document.querySelector("#humidity");
