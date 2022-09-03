@@ -110,6 +110,18 @@ a {
 }
 a:hover {
   color: #283e56;
+  text-decoration: underline;
+}
+
+.active {
+  color: #283e56;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
 }
 
 .verticalDivider {
