@@ -54,6 +54,12 @@ function showWeather(response) {
   humidity.innerHTML = Math.round(response.data.main.humidity);
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
+  let weatherIcon = document.querySelector("#currentIcon");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
@@ -84,6 +90,12 @@ function showTempCurrentLoc(response) {
   humidity.innerHTML = Math.round(response.data.main.humidity);
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
+  let weatherIcon = document.querySelector("#currentIcon");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
 function fetchCoords(position) {
