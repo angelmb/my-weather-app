@@ -18,6 +18,18 @@ function showWeather(response) {
   celciusTemp = response.data.main.temp;
   celciusSwitch.classList.add("active");
   fahrenheitSwitch.classList.remove("active");
+
+  getForecast(response.data.coord);
+}
+
+function getForecast(coordinates) {
+  let parts = `hourly,minutely,alerts`;
+  let apiKey = "0fbf741dd6f046088a411342ceb1813f";
+  let unit = "metric";
+  let lat = coordinates.lat;
+  let lon = coordinates.lon;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${parts}&appid=${apiKey}&units=${unit}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function searchCity(city) {
@@ -83,6 +95,48 @@ function showCelcius(event) {
   fahrenheitSwitch.classList.remove("active");
   let currentTemp = document.querySelector("#current-temp");
   currentTemp.innerHTML = Math.round(celciusTemp);
+}
+
+function formatDate(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  let futureDate = date.getDate();
+  let futureMonth = date.getMonth() + 1;
+  return `${futureMonth}/${futureDate} (${days[day]})`;
+}
+
+function displayForecast(response) {
+  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+
+  forecast.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
+            <div class="col">
+              <h6 class="futureDate"> ${formatDate(day.dt)}</h6>
+              <img src= "http://openweathermap.org/img/wn/${
+                day.weather[0].icon
+              }@2x.png"/>
+              <h5>
+                <span class="max"><strong>${Math.round(
+                  day.temp.max
+                )}</strong></span> /
+                <span class="min">${Math.round(day.temp.min)}° C</span>
+              </h5>
+              <h6>${day.weather[0].main}</h6>
+            </div>
+        `;
+    }
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 let today = new Date();

@@ -1,5 +1,5 @@
 body {
-  background-color: #e6e6d4;
+  background-color: #acc6aa;
 }
 .container {
   max-width: 80%;
@@ -12,7 +12,7 @@ header {
 }
 
 header h1 {
-  color: #005874;
+  color: #004445;
   font-weight: 900;
   font-size: 48px;
 }
@@ -23,13 +23,13 @@ header input {
   padding: 5px 20px;
   margin: 20px 0 0;
   width: 100%;
-  border-color: #1989ac;
+  border-color: #004445;
   border-style: solid;
-  background-color: #faf5e4;
+  background-color: #e0e0e0;
 }
 
 button.currentLoc {
-  background-color: #1989ac;
+  background-color: #004445;
   color: #ffffff;
   padding: 8px 20px;
   border-radius: 8px;
@@ -42,15 +42,15 @@ button.currentLoc {
   text-align: right;
 }
 button:hover {
-  background-color: #005874;
+  background-color: #2c786c;
   cursor: pointer;
 }
 
 .currentWeather {
   border-style: solid;
   border-radius: 18px;
-  border-color: #faf5e4;
-  background-color: #faf5e4;
+  border-color: #e0e0e0;
+  background-color: #e0e0e0;
   padding: 20px 30px;
   margin: 10px 0;
 }
@@ -60,14 +60,14 @@ button:hover {
 }
 
 h2 {
-  color: #005874;
+  color: #004445;
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
 }
 
 #city-name {
-  color: #283e56;
+  color: #283739;
   display: inline;
   padding: 0px 20px 0px 0px;
   font-size: 24px;
@@ -75,7 +75,7 @@ h2 {
 
 #timestamp {
   text-align: right;
-  color: #283e56;
+  color: #283739;
   font-size: 20px;
 }
 
@@ -92,12 +92,12 @@ h2 {
 .currentTemp h1 {
   font-weight: 600;
   font-size: 40px;
-  color: #283e56;
+  color: #283739;
   line-height: 30px;
 }
 
 span.unit {
-  color: #283e56;
+  color: #283739;
   font-size: 16px;
   font-weight: 400;
   top: -12px;
@@ -105,16 +105,16 @@ span.unit {
 }
 
 a {
-  color: #1989ac;
+  color: #2c786c;
   text-decoration: none;
 }
 a:hover {
-  color: #283e56;
+  color: #283739;
   text-decoration: underline;
 }
 
 .active {
-  color: #283e56;
+  color: #283739;
   font-weight: 600;
   text-decoration: none;
   cursor: default;
@@ -125,12 +125,12 @@ a:hover {
 }
 
 .verticalDivider {
-  border-right: thin solid #e6e6d4;
+  border-right: thin solid #aeadad;
   margin: 0px 0px 5px 0px;
 }
 
 .verticalDividerHidden {
-  border-right: thin solid #faf5e4;
+  border-right: thin solid #e0e0e0;
   margin: 0px 0px 5px 0px;
 }
 
@@ -181,18 +181,18 @@ li h5 {
 
 .foreCast h5 {
   font-size: 24px;
-  color: #283e56;
+  color: #283739;
   padding: 0px 0px 5px 0px;
 }
 
 .foreCast h6 {
   font-size: 16px;
-  color: #283e56;
+  color: #283739;
 }
 
 .footer {
   text-align: center;
   font-size: 14px;
   padding: 40px 0px;
-  color: #283e56;
+  color: #283739;
 }
