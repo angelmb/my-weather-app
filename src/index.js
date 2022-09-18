@@ -65,6 +65,8 @@ function showTempCurrentLoc(response) {
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
   celciusSwitch.classList.add("active");
   fahrenheitSwitch.classList.remove("active");
+
+  getForecast(response.data.coord);
 }
 
 function fetchCoords(position) {
